@@ -1,12 +1,6 @@
 import { AsyncValidatorFn } from '@angular/forms';
 import { UsernameService } from './data-access/username.service';
-import {
-  debounceTime,
-  distinctUntilChanged,
-  map,
-  switchMap,
-  timer,
-} from 'rxjs';
+import { map, switchMap, timer } from 'rxjs';
 
 export const createValitor = (service: UsernameService): AsyncValidatorFn => {
   return (control) => {
